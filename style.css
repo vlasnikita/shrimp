@@ -1,0 +1,64 @@
+html, body {
+	margin: 0;
+	font-size: 14px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+.header__wrapper {
+	height: 40vh;
+}
+
+.header {
+	height: 100%;
+	background: #e65245;
+	color: #fff;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	grid-template-rows: 1fr 40px;
+	grid-template-columns: 1fr;
+}
+
+.header__logo {
+	font-size: 8rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu {
+	
+}
+
+.menu__list {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.menu__list-item {
+
+}
+
+.menu__list-item a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* ABOUT */
+
+.about {
+	height: 500px;
+	background: #e5e5e5;
+}
+
+/* OFFERS */
+
+.offers {
+	height: 500px;
+	background: #f8f8f8;
+}

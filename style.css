@@ -7,7 +7,9 @@ html, body {
 /* HEADER */
 
 .header__wrapper {
-	height: 40vh;
+	height: 25vh;
+	position: fixed;
+	width: 100%;
 }
 
 .header {
@@ -29,7 +31,7 @@ html, body {
 }
 
 .menu {
-	
+	transition: width 1s;
 }
 
 .menu__list {
@@ -52,13 +54,13 @@ html, body {
 /* ABOUT */
 
 .about {
-	height: 500px;
+	height: 800px;
 	background: #e5e5e5;
 }
 
 /* OFFERS */
 
 .offers {
-	height: 500px;
+	height: 800px;
 	background: #f8f8f8;
 }

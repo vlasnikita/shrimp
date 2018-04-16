@@ -1,3 +1,8 @@
+<!-- 
+TODO:
+1.Центрирование гамбургера
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,24 +13,61 @@
 <body>
 	<div class="header__wrapper">
 		<div class="header">
+			<div class="header__hamburger-container">
+				<div class="header__hamburger"></div>
+			</div>
 			<div class="header__logo">SHRIMP</div>
 			<div class="menu">
 				<ul class="menu__list">
-					<li class="menu__list-item"><a href="offers__streamers">Стримерам</a></li>
-					<li class="menu__list-item"><a href="offers__advertisers">Рекламодателям</a></li>
-					<li class="menu__list-item"><a href="team">Команда</a></li>
-					<li class="menu__list-item"><a href="feedback">Обратная связь</a></li>
-					<li class="menu__list-item"><a href="contacts">Контакты</a></li>
+					<li class="menu__list-item"><a href="#offers__streamers">Стримерам</a></li>
+					<li class="menu__list-item"><a href="#offers__advertisers">Рекламодателям</a></li>
+					<li class="menu__list-item"><a href="#team">Команда</a></li>
+					<li class="menu__list-item"><a href="#feedback">Обратная связь</a></li>
+					<li class="menu__list-item"><a href="#contacts">Контакты</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<div class="about"></div>
-	<div class="offers">
-		<div id="offers__streamers" class="offers__streamers"></div>
-		<div id="offers__advertisers" class="offers__advertisers"></div>
+	<div class="about">
+		<h2>О нас</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum nam qui sint velit accusamus iusto doloremque ipsa dolorum a ex eius nihil recusandae in incidunt quasi, vitae expedita veniam. Sunt nemo nostrum, consequuntur magni natus animi. Totam quia laudantium voluptatem velit ducimus. Laboriosam hic consectetur repellendus odit laborum. Voluptatem reprehenderit sapiente ad eveniet eum voluptas autem ipsam dolorum recusandae facere, similique debitis esse, ea excepturi nulla aliquam ut nesciunt! Vero fugiat obcaecati excepturi molestias, aut veniam aliquam enim sit eligendi ex laborum, repellendus aspernatur, libero dolore quod voluptatibus ea! Aspernatur neque accusantium debitis praesentium, tempora beatae fugit ad quidem, voluptates labore ipsum. Explicabo corrupti error, corporis consequatur provident quo libero quis culpa, at. Unde culpa aliquid, reiciendis voluptas dolor omnis aspernatur, corporis, laudantium fugit molestiae alias. Consequuntur, ipsum necessitatibus facilis blanditiis, perspiciatis harum voluptates, distinctio dolore consectetur doloribus doloremque molestiae. Accusamus commodi, possimus nisi sequi qui ut molestias expedita obcaecati quo voluptas natus impedit maiores a, molestiae doloremque sint maxime voluptatibus atque unde sit voluptates animi. Dicta, odio, ipsum natus, ipsa, eligendi veniam debitis impedit necessitatibus repudiandae quae nisi excepturi totam architecto. Quas vero, voluptatem illo magni magnam dolorem libero laudantium consectetur numquam debitis excepturi quidem quaerat nihil fugiat doloribus soluta incidunt, possimus, minima minus aliquam pariatur cupiditate id. Minus sapiente tenetur excepturi quos repellat ut alias maiores, ad, earum. Obcaecati suscipit aliquid esse, quod hic officiis eveniet, amet tempore accusamus. Soluta, alias molestias ipsa doloribus, ad consectetur explicabo repudiandae, doloremque dolor quam facilis quas optio aliquid ea excepturi, sunt voluptatibus culpa. Hic ipsam ea officiis repellat mollitia, nihil iste sequi quam, laborum earum cumque est nam quia eligendi saepe eaque at inventore tenetur labore facere culpa autem voluptates. Quos reprehenderit ea hic adipisci, magni aspernatur commodi, vitae obcaecati molestias doloribus omnis! Unde sint officia architecto iste, laboriosam reiciendis. Ipsum quas expedita et accusantium vero quod reiciendis cumque, esse fugit voluptatem obcaecati, nulla minus illo ullam, ea corporis deserunt voluptatum laboriosam. Officiis praesentium laudantium culpa illum omnis porro quia placeat, cumque ipsum architecto exercitationem at quo maxime labore, ut modi eligendi harum est quam nisi ex iure. Nam, iste, delectus cupiditate illo ut laboriosam, est possimus modi dicta saepe ea repellat quo ducimus quibusdam placeat doloremque quaerat. Similique dolores hic non porro, labore, modi voluptas facere harum, aliquam corporis quibusdam unde accusamus accusantium eveniet reprehenderit! Libero maiores cumque minima ut, quas et est molestiae autem perspiciatis provident eligendi voluptatem pariatur aliquam quasi quisquam minus ipsum voluptates aspernatur modi maxime reiciendis odit fugit dignissimos. Totam delectus ea similique dignissimos vero fuga corporis optio aliquam, quaerat deleniti velit mollitia magnam veritatis, necessitatibus magni sunt esse reprehenderit repudiandae recusandae consectetur provident labore nesciunt. Ullam repellendus officia eligendi ipsam. Sed doloribus labore voluptatibus autem in. Quia sit fuga debitis doloribus inventore consectetur consequatur, nulla iure eveniet ea omnis ipsa sed, excepturi cupiditate distinctio autem numquam iusto, incidunt illo libero qui nihil minima nisi? Accusamus, molestiae aut nihil culpa, ducimus minima illum aliquam perspiciatis recusandae. Libero voluptates doloremque tempora quisquam vitae iure id tempore laborum!</p>
 	</div>
-	<div id="team" class="team"></div>
+	<div class="offers">
+		<div class="tab">
+			<button class="tab__link active" onclick="openTab(event, 'offers__streamers')">Стримерам</button>
+			<button class="tab__link" onclick="openTab(event, 'offers__advertisers')">Рекламодателям</button>
+		</div>
+		<div class="offers__card">
+			<div class="offers__card-content">
+				<div id="offers__streamers" class="offers__streamers tab__content">инфа стрмиеров</div>
+				<div id="offers__advertisers" class="offers__advertisers tab__content">инфа рекламщиков</div>
+			</div>
+		</div>
+	</div>
+	<div id="team" class="team">
+		<ul class="team__list">
+			<li>
+				<img src="red.jpg" alt="">
+				<p>Рейнджер красного цвета</p>
+			</li>
+			<li>
+				<img src="black.jpg" alt="">
+				<p>Рейнджер чёрного цвета</p>
+			</li>
+			<li>
+				<img src="blue.jpg" alt="">
+				<p>Рейнджер голубого цвета (гей)</p>
+			</li>
+			<li>
+				<img src="yellow.jpg" alt="">
+				<p>Рейнджерка жёлтого цвета</p>
+			</li>
+			<li>
+				<img src="pink.jpg" alt="">
+				<p>Рейнджерка розовго цвета (девчачьего)</p>
+			</li>
+		</ul>
+	</div>
 	<div id="feedback" class="feedback"></div>
 	<div id="contacts" class="contacts"></div>
 

@@ -10,28 +10,61 @@ html, body {
 	height: 25vh;
 	position: fixed;
 	width: 100%;
+	transition: height 1s;
+    top: 0;
 }
 
 .header {
 	height: 100%;
 	background: #e65245;
 	color: #fff;
-	display: grid;
+	display: flex;
+	flex-direction: column;
 	align-content: center;
 	justify-content: center;
-	grid-template-rows: 1fr 40px;
-	grid-template-columns: 1fr;
+	transition: all 1s;
 }
 
 .header__logo {
+	height: 200px;
 	font-size: 8rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: all 1s;
+}
+
+.header__hamburger-container {
+	height: 80px;
+	margin-bottom: -80px;
+    margin-left: -40px;
+	display: flex;
+	align-items: center;
+	opacity: 0;
+	transition: all .5s 1.1s;
+}
+
+.header__hamburger {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    border-top: 4px solid #fff;
+    border-bottom: 4px solid #fff;
+}
+
+.header__hamburger:before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0px;
+    width: 100%;
+    border-top: 4px solid #fff;
 }
 
 .menu {
-	transition: width 1s;
+	height: 40px;
+	transition: all 3s, opacity .75s;
 }
 
 .menu__list {
@@ -42,10 +75,6 @@ html, body {
 	align-items: center;
 }
 
-.menu__list-item {
-
-}
-
 .menu__list-item a {
 	color: #fff;
 	text-decoration: none;
@@ -54,13 +83,87 @@ html, body {
 /* ABOUT */
 
 .about {
-	height: 800px;
+	height: 75vh;
 	background: #e5e5e5;
+	margin-top: 25vh;
 }
 
 /* OFFERS */
 
 .offers {
 	height: 800px;
-	background: #f8f8f8;
+	width: 100%;
+	background: #c4bfbf;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab__link {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.tab__link:hover {
+    background-color: #ddd;
+}
+
+.tab__link.active {
+    background-color: #ccc;
+}
+
+.offers__card {
+	position: relative;
+	height: 500px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.offers__card-content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: all 1s;
+	transform: rotateY(0deg);
+}
+
+.tab__content {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	background: #fff;
+    transition: all 1s;
+}
+
+.tab__content.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+.offers__streamers {
+
+}
+
+.offers__advertisers {
+	transform: rotateY(180deg);
 }

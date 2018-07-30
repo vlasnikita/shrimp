@@ -1,70 +1,39 @@
-const header = document.querySelector('.header')
-const headerWrapper = document.querySelector('.header__wrapper')
+document.addEventListener("DOMContentLoaded", function(event) { 
+    listenVideo();
 
-const hamburger = document.querySelector('.header__hamburger-container')
-const logo = document.querySelector('.logo')
-const menu = document.querySelector('.menu')
-const menuItems = document.querySelectorAll('.menu-item a')
+    setInterval(wrapperBoxShadowResize, 2000)
+});
 
-window.addEventListener('scroll', e => {
-	console.log(menuItems)
-	if(window.scrollY > 330) {
-		// headerWrapper.style.height = '80px'
-		
-		// logo.style.height = '50px'
-		// logo.style.fontSize = '4rem'
-		menu.style.backgroundColor = '#fff'
-		menuItems.forEach(item => item.style.color = '#223e4a')
-		// menu.style.width = '0vw'
-		// menu.style.height = '0px'
-		// menu.style.marginLeft = '-100vw'
-		// menu.style.opacity = '0'
-		// menu.style.borderTop = '1px solid rgba(34, 62, 74, 0)'
+const listenVideo = () => {
+    const video = document.querySelector('.video');
+    const wrapper = document.querySelector('.helloMessage__wrapper');
+    const helloMessage = document.querySelector('.helloMessage');
 
-		// hamburger.style.marginLeft = '10px'
-		// hamburger.style.opacity = '1'
-		// hamburger.style.transition = 'all .5s 1.1s'	
-	} 
-	else {
-		menu.style.backgroundColor = 'transparent'
-		menuItems.forEach(item => item.style.color = '#fff')
-	// 	headerWrapper.style.height = '30vh'
-		
-	// 	logo.style.height = '250px'
-	// 	logo.style.fontSize = '8rem'
+    document.querySelector('.video').addEventListener('mouseover', e => {
+        wrapper.style.left = '60%';
+        wrapper.style.opacity = '.5';
 
-	// 	menu.style.width = '100vw'
-	// 	menu.style.height = '40px'
-	// 	menu.style.marginLeft = '0'
-	// 	menu.style.opacity = '1'
-	// 	menu.style.borderTop = '1px solid rgba(34, 62, 74, .15)'
+        helloMessage.style.left = '60%';
+        helloMessage.style.opacity = '.5';
+    })
 
-	// 	hamburger.style.marginLeft = '-10px'
-	// 	hamburger.style.opacity = '0'
-	// 	hamburger.style.transition = 'all .5s'
-	}
-})
+    document.querySelector('.video').addEventListener('mouseleave', e => {
+        wrapper.style.left = '40%';
+        wrapper.style.opacity = '1';
 
-function openTab(evt, tabName) {
-    const tabs = document.querySelectorAll('.tab__content');
-    const tabLinks = document.querySelectorAll('.tab__link');
-    const card = document.querySelector('.offers__card-content')
-
-    // tabs.forEach(tab => { 
-    // 	tab.className = tab.className.replace(' active', '') 
-    // 	if(tab.classList.contains(tabName)) tab.className = `${tab.className} active`
-    // })
-
-    card.style.transform = !card.style.transform ? 'rotateY(180deg)' : ''
-    // card.style.transform = !card.style.transform ? 'rotateY(180deg) translateX(-100%)' : ''
-
-    tabLinks.forEach(link => { link.className = link.className.replace(' active', '') })
-
-    evt.currentTarget.className = evt.currentTarget.className.includes('active') ?
-    	evt.currentTarget.className : 
-    	`${evt.currentTarget.className} active`
+        helloMessage.style.left = '40%';
+        helloMessage.style.opacity = '1';
+    })
 }
 
-function focusInput() {
-	document.getElementById('name').focus();
+function wrapperBoxShadowResize (){
+    const wrapper = document.querySelector('.helloMessage__wrapper');
+    
+    if(this.spreaded){
+        this.spreaded = false
+        wrapper.style.boxShadow = '#666 -1px -1px 0px 0px';
+    } else {
+        this.spreaded = true
+        wrapper.style.boxShadow = '#666 -1px -1px 20px 0px';
+    }
 }

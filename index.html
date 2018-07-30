@@ -1,139 +1,53 @@
-<!-- 
-TODO:
-1.Центрирование гамбургера
- -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>Shrimp</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Главная | SHRIMP</title>
+    <link href="./style.css" rel="stylesheet">
 </head>
 <body>
-	<ul class="menu">
-		<li class="menu-item"><a href="#offers__streamers">Стримерам</a></li>
-		<li class="menu-item"><a href="#offers__advertisers">Рекламодателям</a></li>
-		<li class="menu-item"><a href="#team">Команда</a></li>
-		<li class="menu-item"><a href="#feedback">Обратная связь</a></li>
-		<li class="menu-item"><a href="#contacts">Контакты</a></li>
-	</ul>
-	<div class="header">
-		<div class="header__video">
-			<video playsinline autoplay muted loop poster="img/cat.png" id="bgvid">
-			    <source src="img/background.mp4" type="video/mp4">
-			</video>
-		</div>
-		<div class="header__logo"></div>
-	</div>
-	<div class="about">
-		<div class="about__body">
-			<p class="about__title">Профессиональная команда специалистов по продвижению в киберспортивной индустрии</p>
-			<br><hr><br>
-			<div class="about__text-container">
-				<div class="about__icon">
-				</div>
-				<div class="about__text">
-					<p>Мы редоставляем качественные <b>рекламные услуги и PR</b> в условиях стремительно растущего рынка киберспорта России и СНГ.</p>
-					<p>Мы работаем напрямую со стримерами и брендами, используя <b>современные методы</b> маркетинга.</p> 
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="offers">
-		<div class="tab">
-			<button class="tab__link active" onclick="openTab(event, 'offers__streamers')">Стримерам</button>
-			<button class="tab__link" onclick="openTab(event, 'offers__advertisers')">Рекламодателям</button>
-		</div>
-		<div class="offers__card">
-			<div class="offers__card-content">
-				<div id="offers__streamers" class="offers__streamers tab__content">
-					<div class="offers__list">
-						<div class="offers__item">
-							<img src="img/twitch.png" alt="Дизайн канала" width="70" height="70">
-							<div class="offers__item-text">Дизайн канала</div>
-						</div>
-						<div class="offers__item">
-							<img src="img/social_media.png" alt="Ведение соцсетей" width="70" height="70">
-							<div class="offers__item-text">Ведение соцсетей</div>
-						</div>
-						<div class="offers__item">
-							<img src="img/cat.png" alt="Создание имиджа" width="70" height="70">
-							<div class="offers__item-text">Создание имиджа</div>
-						</div>
-						<div class="offers__item">
-							<img src="img/followers.png" alt="Продвижение и PR" width="70" height="70">
-							<div class="offers__item-text">Продвижение и PR</div>
-						</div>
-						<div class="offers__item">
-							<img src="img/calendar.png" alt="Разработка графика стримов" width="70" height="70">
-							<div class="offers__item-text">Разработка графика стримов</div>
-						</div>
-					</div>
-					<a href="#feedback" class="offers__button" onclick="focusInput()">Получить консультацию</a>
-				</div>
-				<div id="offers__advertisers" class="offers__advertisers tab__content">
-					<div class="offers__list">
-						<div class="offers__item">
-							<img src="img/exclusive.png" alt="Коммерческое предложение" width="70" height="70">
-							<div class="offers__item-text">Коммерческое предложение</div>
-						</div>
-						<div class="offers__item">
-							<img src="img/integrations.png" alt="Уникальные типы рекламных интеграций" width="70" height="70">
-							<div class="offers__item-text">Уникальные типы рекламных интеграций</div>
-						</div>
-						<div class="offers__item">
-							<img src="img/production.png" alt="Киберспортивный продакшн" width="70" height="70">
-							<div class="offers__item-text">Киберспортивный продакшн</div>
-						</div>
-						<div class="offers__item">
-							<img src="img/awareness_growth.png" alt="Повышение узнаваемости бренда" width="70" height="70">
-							<div class="offers__item-text">Повышение узнаваемости бренда</div>
-						</div>
-					</div>
-					<a href="#feedback" class="offers__button" onclick="focusInput()">Получить консультацию</a>
-				</div>
-			</div>
-		</div>
-	</div>
-<!-- 	<div id="team" class="team">
-	<ul class="team__list">
-		<li>
-			<img src="red.jpg" alt="">
-			<p>Рейнджер красного цвета</p>
-		</li>
-		<li>
-			<img src="black.jpg" alt="">
-			<p>Рейнджер чёрного цвета</p>
-		</li>
-		<li>
-			<img src="blue.jpg" alt="">
-			<p>Рейнджер голубого цвета (гей)</p>
-		</li>
-		<li>
-			<img src="yellow.jpg" alt="">
-			<p>Рейнджерка жёлтого цвета</p>
-		</li>
-		<li>
-			<img src="pink.jpg" alt="">
-			<p>Рейнджерка розовго цвета (девчачьего)</p>
-		</li>
-	</ul>
-</div> -->
-	<div id="feedback" class="feedback">
-	<p class="feedback__title">Оставить заявку</p>
-		<form class="feedback__form" action="" method="POST" enctype="multipart/form-data">
-			<input id="name" name="name" type="text" placeholder="Имя">
-			<input name="contact" type="text" placeholder="Телефон/email">
-			<textarea name="message" cols="30" rows="5" placeholder="Сообщение"></textarea>
-			<button class="feedback__submit">Отправить</button>
-		</form>
-	</div>
-	<div id="contacts" class="contacts">
-		<i class="fas fa-envelope"></i><p>&nbsp; info@shrimp.gg</p>
-	</div>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-	<script src="script.js"></script>
+    <header class="header">
+        <div class="header__logo">
+            <span>LOGO</span>
+        </div>
+        <div class="header__menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- <nav class="nav">
+            <ul class="nav">
+                <li class="nav-item">О нас</li>
+                <li class="nav-item">Стримерам</li>
+                <li class="nav-item">Рекламодателям</li>
+                <li class="nav-item">Контакты</li>
+            </ul>
+        </nav> -->
+    </header>
+    <section class="main">
+        <div class="video">
+            <iframe 
+                id="myIframe"
+                src="https://www.youtube.com/embed/viSX_1dN3JU?autoplay=1&controls=0&loop=1&playlist=viSX_1dN3JU&showinfo=0&enablejsapi=1&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&mute=1" 
+                frameborder="0" 
+                allow="autoplay" 
+                autoplay
+                width="100%"
+                height="100%"
+            ></iframe>
+        </div>
+        <div class="helloMessage__wrapper">
+        </div>
+        <div class="helloMessage">
+                <div class="helloMessage__title" data-text="help•">ГЕЙМЕР</div>
+                <div class="helloMessage__text">Мы - команда задров, мы знаем игры и игроков, и мы знаем, как делать на этом деньги - вам и нам</div>        
+            </div>
+    </section>
+    <section class="about">.about</section>
+    <section class="offers">.offers</section>
+    <section class="contacts">.contacts</section>
+   
+    <script src="./script.js"></script>
 </body>
-</html>

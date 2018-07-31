@@ -1,6 +1,6 @@
 html, body {
     margin: 0;
-    background-image: linear-gradient(90deg, #888 0%, transparent 0%, #888 1%, transparent 1%, transparent);
+    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
     background-size: 200px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 14px;
@@ -15,11 +15,53 @@ iframe{
     min-width: 100%;
 }
 
+section {
+    position: relative;
+}
+
+.nav {
+    z-index: 150;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #849871;
+    transition: 0.75s ease-out;
+}
+
+.nav.show {
+    transform: translateY(100%);
+}
+
+.nav__close {
+    position: absolute;
+    top: 10px;
+    height: 40px;
+    width: 40px;
+    right: 30px;
+}
+
+.nav__close span {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    transform: translate(-50%, -50%) rotateZ(45deg);
+    left: 50%;
+    top: 50%;
+    background: #fff;
+}
+
+.nav__close span:nth-child(1) {
+    transform: translate(-50%, -50%) rotateZ(135deg);
+}
+
 .header {
     z-index: 100;
     position: fixed;
     height: 100px;
-    width: 100%;
+    width: calc(100% - 50px);
+    padding: 0 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,8 +70,9 @@ iframe{
 
 .header__menu {
     position: relative;
-    height: 50%;
-    width: 50px;
+    height: 100%;
+    width: 40px;
+    margin-top: -30px;
 }
 
 .header__menu span {
@@ -46,16 +89,15 @@ iframe{
 }
 
 .header__menu span:nth-child(1) {
-    margin-top: -4px;
+    margin-top: -5px;
 }
 
 
 .header__menu span:nth-child(2) {
-    margin-top: 4px;
+    margin-top: 5px;
 }
 
 .main {
-    position: relative;
     height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -127,6 +169,18 @@ iframe{
 .about {
     height: 100vh;
     width: 100%;
+}
+
+.background__title {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    font-size: 18em;
+    color: #888;
+    opacity: .1;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .offers {

@@ -8,23 +8,27 @@
     <link href="./style.css" rel="stylesheet">
 </head>
 <body>
+    <nav class="nav">
+        <div class="nav__close" onclick="closeMenu()">
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav__list">
+            <li class="nav__item">О нас</li>
+            <li class="nav__item">Стримерам</li>
+            <li class="nav__item">Рекламодателям</li>
+            <li class="nav__item">Контакты</li>
+        </ul>
+    </nav>
     <header class="header">
         <div class="header__logo">
             <span>LOGO</span>
         </div>
-        <div class="header__menu">
+        <div class="header__menu" onclick="openMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <!-- <nav class="nav">
-            <ul class="nav">
-                <li class="nav-item">О нас</li>
-                <li class="nav-item">Стримерам</li>
-                <li class="nav-item">Рекламодателям</li>
-                <li class="nav-item">Контакты</li>
-            </ul>
-        </nav> -->
     </header>
     <section class="main">
         <div class="video">
@@ -45,9 +49,15 @@
                 <div class="helloMessage__text">Мы - команда задров, мы знаем игры и игроков, и мы знаем, как делать на этом деньги - вам и нам</div>        
             </div>
     </section>
-    <section class="about">.about</section>
-    <section class="offers">.offers</section>
-    <section class="contacts">.contacts</section>
+    <section class="about">
+        <p class="background__title">О нас</p>
+    </section>
+    <section class="offers">
+        <p class="background__title">Стримерам</p>
+    </section>
+    <section class="contacts">
+        карта
+    </section>
    
     <script src="./script.js"></script>
 </body>

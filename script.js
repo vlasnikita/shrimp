@@ -37,3 +37,13 @@ function wrapperBoxShadowResize (){
         wrapper.style.boxShadow = '#666 -1px -1px 20px 0px';
     }
 }
+
+const openMenu = () => {
+    const menu = document.querySelector('.nav');
+    menu.className += ' show';
+}
+
+const closeMenu = () => {
+    const menu = document.querySelector('.nav');
+    menu.className = ' nav';
+}

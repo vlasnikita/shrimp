@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Главная | SHRIMP</title>
     <link href="./style.css" rel="stylesheet">
+    <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
 </head>
 <body>
     <nav class="nav">
@@ -22,7 +23,7 @@
     </nav>
     <header class="header">
         <div class="header__logo">
-            <span>LOGO</span>
+            <img src="./shrimp.svg" height="80">
         </div>
         <div class="header__menu" onclick="openMenu()">
             <span></span>
@@ -49,14 +50,53 @@
                 <div class="helloMessage__text">Мы - команда задров, мы знаем игры и игроков, и мы знаем, как делать на этом деньги - вам и нам</div>        
             </div>
     </section>
-    <section class="about">
-        <p class="background__title">О нас</p>
+    <section class="content about">
+        <h1 class="background__title">О нас</h1>
+        <div class="card">
+            <h2 class="card__title">Акинатор целует песок, по которому мы ходили! 😏</h2>
+            <p class="card__text">Надо ли говорить, что обозримые конкуренты завтракают тем, что мы не доели на ужин. Ещё три месяца в таком темпе, и к нам заявится ФАС с проверками.</p>
+            <p class="card__text">Сколько нужно маркетологов киберспортивного направления, чтобы вкрутить лампочку? Одна Креветка! А сколько нужно креветок, чтобы поймать Кита индустрии? ;)</p>
+            <p class="card__aside">Цитата лидера мнения о нас. Такая, чтоб прям вообще. Чтоб каждый ох и каждый ах, на каждый вздох сомненья в прах!</p>
+
+        </div>
     </section>
-    <section class="offers">
-        <p class="background__title">Стримерам</p>
+    <section class="content offers">
+        <div class="offers__block">
+            <h1 class="background__title">SHRIMP</h1>
+            <div class="offers__offer">
+                <ul class="offers__list">
+                    <h2 class="offers__title">Не имей сто рублей, а имей сто сабов на Твиче</h2>
+                    <li class="offers__item"><span class="offers__item-number">01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Натянем грин хромач</li>
+                    <li class="offers__item"><span class="offers__item-number">02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Приготовим покушать</li>
+                    <li class="offers__item"><span class="offers__item-number">03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Отучим неубедительно шутить</li>
+                    <li class="offers__item"><span class="offers__item-number">04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Устроим сеанс аудионаркотиков</li>
+                    <li class="offers__item"><span class="offers__item-number">05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Приведём кошельки на канал</li>
+                    <li class="offers__item"><span class="offers__item-number">06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Заберём себе 90%</li>
+                </ul>
+                <div class="offers__arrow offers__arrow--right offers__arrow--active">
+                    <p class="offers__arrow-text">рекламодателям</p>
+                </div>
+
+            </div>
+            <div class="offers__offer">
+                <ul class="offers__list">
+                    <h2 class="offers__title">Пиар чернее ануса конкурентов</h2>
+                    <li class="offers__item"><span class="offers__item-number">01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Катнём в кикерок</li>
+                    <li class="offers__item"><span class="offers__item-number">02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Накидаем ideas</li>
+                    <li class="offers__item"><span class="offers__item-number">03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Покреативим в кулуарах</li>
+                    <li class="offers__item"><span class="offers__item-number">04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Пустим пыль в глаза</li>
+                    <li class="offers__item"><span class="offers__item-number">05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Насладимся хрустом локтей конкурентов</li>
+                    <li class="offers__item"><span class="offers__item-number">06&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–––&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>Набьём татухи в память о сотрудничестве</li>
+                </ul>
+                <div class="offers__arrow offers__arrow--left">
+                    <p class="offers__arrow-text">стримерам</p>
+                </div>
+            </div>
+        </div>
+        <button class="offers__button">Call-to-action</button>
     </section>
     <section class="contacts">
-        карта
+        <div id="map"></div>
     </section>
    
     <script src="./script.js"></script>

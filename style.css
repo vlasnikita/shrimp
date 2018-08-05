@@ -277,6 +277,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 150px;
 }
 
 .about {
@@ -333,7 +334,12 @@ ul {
     margin-left: 100px;
 }
 
-.card__text--advertisers .card__text--streamers {
+.card__text--advertisers {
+    max-width: 100%;
+    margin-left: 0;
+}
+
+.card__text--streamers {
     max-width: 100%;
     margin-left: 0;
 }

@@ -139,7 +139,7 @@ const listenOffersArrow = () => {
         cardText.style.color = 'rgb(87, 91, 102)';
         backgroundTitle.style.color = '#f0f2f8';
         offersArrow.style.color = '#ccc';
-        offersArrowText.style.color = 'currentColor';
+        //offersArrowText.style.color = 'currentColor';
         offersButton.style.color = '#fff';
         nav.style.backgroundColor = 'red';
         header.style.backgroundColor = 'transparent';
@@ -148,7 +148,7 @@ const listenOffersArrow = () => {
         about.style.backgroundColor = '#fff'
         offersButton.style.backgroundColor = 'red';
 
-        console.log("Button1 was clicked")
+        console.log("Button1 was clicked");
     })
 
     button2.addEventListener('click', e => {
@@ -159,7 +159,7 @@ const listenOffersArrow = () => {
         cardText.style.color = 'rgb(87, 91, 102)';
         backgroundTitle.style.color = '#f0f2f8';
         offersArrow.style.color = '#ccc';
-        offersArrowText.style.color = 'currentColor';
+        //offersArrowText.style.color = 'currentColor';
         offersButton.style.color = '#fff';
         nav.style.backgroundColor = '#0066cc';
         header.style.backgroundColor = 'transparent';
@@ -168,7 +168,7 @@ const listenOffersArrow = () => {
         about.style.backgroundColor = '#fff'
         offersButton.style.backgroundColor = '#0066cc';
 
-        console.log("Button2 was clicked")
+        console.log("Button2 was clicked");
     })
 
     button3.addEventListener('click', e => {
@@ -179,15 +179,15 @@ const listenOffersArrow = () => {
         cardText.style.color = 'rgb(87, 91, 102)';
         backgroundTitle.style.color = '#f0f2f8';
         offersArrow.style.color = '#fff';
-        offersArrowText.style.color = 'currentColor';
+        //offersArrowText.style.color = 'currentColor';
         offersButton.style.color = '#ccc';
         nav.style.backgroundColor = '#0066cc';
         header.style.backgroundColor = 'transparent';
         main.style.backgroundColor = '#555555';
         helloMessageWrapper.style.backgroundColor = '#302e2e';
-        about.style.backgroundColor = '#ccc'
+        about.style.backgroundColor = '#ccc';
         offersButton.style.backgroundColor = '#0066cc';
 
-        console.log("Button3 was clicked")
+        console.log("Button3 was clicked");
     })
 

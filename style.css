@@ -176,6 +176,10 @@ ul {
     box-shadow: 0px 5px 20px 0px rgba(155,70,70,.35);
 }
 
+.button--submit {
+    margin-top: 35px;
+}
+
 .main {
     position: absolute;
     top: 0;
@@ -501,7 +505,6 @@ ul {
       height:100%;
       width: 100%;
       position: absolute; top: 0; left: 0;
-    filter: grayscale(70%);
 }
 
 #map:after {
@@ -511,19 +514,46 @@ ul {
     position: absolute; top: 0; left: 0;
     z-index: 1;
     box-shadow: inset 0px 0 20px 1px rgba(8,8,8,.4);
+    z-index: 1;
+    background: rgba(200,200,200,.3);
 }
 
-.contacts__info {
+.contactsContent {
     z-index: 100;
-    top: 20%;
-    right: 10%;
     position: absolute;
+    top: 50%;
+    right: 15%;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+.contacts__block {
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 30px;
+    align-items: center;
     box-shadow: 0px 0 20px 1px rgba(8,8,8,.15);
+    padding: 30px 70px;
+}
+
+.contacts__title {
+    font-size: 2em;
+    margin-bottom: 35px;
+}
+
+.contacts__title:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contacts__block--info {
+    top: 15%;
+    margin-bottom: 30px;
 }
 
 .contacts__contact {
@@ -537,11 +567,25 @@ ul {
     font-size: 1.5em;
 }
 
-.contacts__form {
+.contacts__input {
+    height: 60px;
+    width: 280px;
+    margin: 0 30px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #757575;
+    background: transparent;
+    font-size: 1.5em;
+    transition: .5s;
+}
+
+.contacts__input:focus {
+    border-bottom: 2px solid red;
+}
+
+.contacts__block--form {
     background-color: #fff;
-    margin-top: 50px;
-   position: absolute;
-   box-shadow: 0px 0 20px 1px rgba(8,8,8,.15);
+    box-shadow: 0px 0 20px 1px rgba(8,8,8,.15);
 }
 
 

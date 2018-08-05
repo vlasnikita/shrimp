@@ -79,7 +79,7 @@
             </div>
         </div>
         <div class="buttonContainer">
-            <button class="button button--info">Презентация <div class="export icon"></div></button>
+            <button class="button button--info">Презентация&nbsp;&nbsp;<i class="fas fa-external-link-alt"></i></button>
             <button class="button button--cta">Заказать консультацию</button>
         </div>
     </section>
@@ -105,8 +105,30 @@
         </div>
     </section>н
     <section class="contacts">
-        <div id="map"></div>
+        <div id="map">
+            <div class="contactsContent">
+                <div class="contacts__block contacts__block--info">
+                    <h2 class="card__title contacts__title">Контакты</h2>
+                    <p class="contacts__contact">
+                       <i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                        info@shrimp.gg</p>
+                    <p class="contacts__contact">
+                        <i class="fab fa-telegram-plane"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                        @shrimp_info
+                    </p>
+                    <p class="contacts__contact"><i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                        +7 (915) 35-8888-6
+                    </p>
+                </div>
+                <form class="contacts__block contacts__block--form" action="" method="POST" enctype="multipart/form-data">
+                    <h2 class="card__title contacts__title">Оставить заявку</h2>
+                    <input class="contacts__input" id="name" name="name" type="text" placeholder="Имя">
+                    <input class="contacts__input" name="contact" type="text" placeholder="Телефон/email">
+                    <button class="button button--cta button--submit">Отправить</button>
+                </form>
+            </div>
+        </div>
     </section>
-
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>

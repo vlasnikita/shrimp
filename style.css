@@ -242,6 +242,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 150px;
 }
 
 .about {
@@ -303,6 +304,11 @@ ul {
     margin-left: 0;
 }
 
+.card__text--streamers {
+    max-width: 100%;
+    margin-left: 0;
+}
+
 .card__aside {
     position: absolute;
     top: 0;
@@ -359,11 +365,11 @@ ul {
     top: calc(5vh + 50%);
 }
 
-.background__title--advertisers {
+.background__title--advertisers .background__title--streamers {
     font-size: 9em;
 }
 
-.advertisers {
+.advertisers .streamers {
     position: relative;
     height: auto;
     padding: 200px 0;

@@ -176,45 +176,6 @@ ul {
     box-shadow: 0px 5px 20px 0px rgba(155,70,70,.35);
 }
 
-.export.icon {
-    top: 50%;
-    right: 25px;
-    transform: translateY(calc(-50% - 5px)) rotateZ(90deg);
-    color: red;
-    position: absolute;
-    margin-left: 4px;
-    margin-top: 7px;
-    width: 15px;
-    height: 13px;
-    border-radius: 1px;
-    border: solid 1px currentColor;
-}
-
-.export.icon:before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: 4px;
-    width: 1px;
-    height: 10px;
-    border-left: solid 3px white;
-    border-right: solid 3px white;
-    background-color: currentColor;
-}
-
-.export.icon:after {
-    content: '';
-    position: absolute;
-    left: 5px;
-    top: -6px;
-    width: 4px;
-    height: 4px;
-    border-top: solid 1px currentColor;
-    border-right: solid 1px currentColor;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
 .main {
     position: absolute;
     top: 0;

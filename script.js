@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) {
     listenVideo();
     setInterval(wrapperBoxShadowResize, 2000)
     listenScroll();
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 ymaps.ready(init);
- 
+
         function init () {
             var myMap = new ymaps.Map('map', {
                     center: [55.749750, 37.542581],
@@ -40,7 +40,7 @@ const listenVideo = () => {
 
 function wrapperBoxShadowResize (){
     const wrapper = document.querySelector('.helloMessage__wrapper');
-    
+
     if(this.spreaded){
         this.spreaded = false
         wrapper.style.boxShadow = '#666 -1px -1px 0px 0px';
@@ -109,3 +109,85 @@ const listenOffersArrow = () => {
         arrowLeft.style.transform = 'translate(0%, -50%)';
     });
 }
+
+// Тестируем цвета
+    const button1 = document.querySelector('.test__color-button1');
+    const button2 = document.querySelector('.test__color-button2');
+    const button3 = document.querySelector('.test__color-button3');
+
+    //colors:
+    const navItem = document.querySelector('.nav__item');
+    const header = document.querySelector('.header');
+    const hellloMessage = document.querySelector('.helloMessage');
+    const cardText = document.querySelector('.card__text');
+    const backgroundTitle = document.querySelector('.background__title');
+    const offersArrow = document.querySelector('.offers__arrow');
+    const offersArrowText = document.querySelector('.offers__arrow--text');
+    const offersButton = document.querySelector('.offers__button');
+
+    //background-colors:
+    const nav = document.querySelector('.nav');
+    const main = document.querySelector('.main');
+    const helloMessageWrapper = document.querySelector('.helloMessage__wrapper');
+    const about = document.querySelector('.about');
+
+    button1.addEventListener('click', e => {
+        navItem.style.color = '#fff';
+        header.style.color = '#fff';
+        hellloMessage.style.color = '#7c7c7c';
+        header.style.color = '#fff';
+        cardText.style.color = 'rgb(87, 91, 102)';
+        backgroundTitle.style.color = '#f0f2f8';
+        offersArrow.style.color = '#ccc';
+        offersArrowText.style.color = 'currentColor';
+        offersButton.style.color = '#fff';
+        nav.style.backgroundColor = 'red';
+        header.style.backgroundColor = 'transparent';
+        main.style.backgroundColor = '#555555';
+        helloMessageWrapper.style.backgroundColor = '#302e2e';
+        about.style.backgroundColor = '#fff'
+        offersButton.style.backgroundColor = 'red';
+
+        console.log("Button1 was clicked")
+    })
+
+    button2.addEventListener('click', e => {
+        navItem.style.color = '#fff';
+        header.style.color = '#fff';
+        hellloMessage.style.color = '#7c7c7c';
+        header.style.color = '#fff';
+        cardText.style.color = 'rgb(87, 91, 102)';
+        backgroundTitle.style.color = '#f0f2f8';
+        offersArrow.style.color = '#ccc';
+        offersArrowText.style.color = 'currentColor';
+        offersButton.style.color = '#fff';
+        nav.style.backgroundColor = '#0066cc';
+        header.style.backgroundColor = 'transparent';
+        main.style.backgroundColor = '#555555';
+        helloMessageWrapper.style.backgroundColor = '#302e2e';
+        about.style.backgroundColor = '#fff'
+        offersButton.style.backgroundColor = '#0066cc';
+
+        console.log("Button2 was clicked")
+    })
+
+    button3.addEventListener('click', e => {
+        navItem.style.color = '#ccc';
+        header.style.color = '#ccc';
+        hellloMessage.style.color = '#7c7c7c';
+        header.style.color = '#ccc';
+        cardText.style.color = 'rgb(87, 91, 102)';
+        backgroundTitle.style.color = '#f0f2f8';
+        offersArrow.style.color = '#fff';
+        offersArrowText.style.color = 'currentColor';
+        offersButton.style.color = '#ccc';
+        nav.style.backgroundColor = '#0066cc';
+        header.style.backgroundColor = 'transparent';
+        main.style.backgroundColor = '#555555';
+        helloMessageWrapper.style.backgroundColor = '#302e2e';
+        about.style.backgroundColor = '#ccc'
+        offersButton.style.backgroundColor = '#0066cc';
+
+        console.log("Button3 was clicked")
+    })
+

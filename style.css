@@ -47,7 +47,7 @@ ul {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: #e08342;
     transition: 0.75s ease-out;
     display: flex;
     flex-direction: column;
@@ -105,8 +105,10 @@ ul {
 }
 
 .header {
-    color: #000;
-    background-color: #fff;
+    background-color: #303030;
+    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
+    background-size: 150px;
+    color: #fff;
     z-index: 10;
     position: fixed;
     height: 80px;
@@ -128,10 +130,13 @@ ul {
     transform: translate(-50%, -50%);
     line-height: 80px;
     font-size: 2em;
-    color: #000;
+    color: #fff;
 }
 
 .header__menu {
+    background-color: #303030;
+    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
+    background-size: 150px;
     position: relative;
     height: 100%;
     width: 40px;
@@ -178,24 +183,28 @@ ul {
 }
 
 .button--cta {
-    background-color: red;
+    box-shadow: 0px 5px 20px 0px rgba(155,0,0,.5);
+    background-color: #e08342;
     color: #fff;
 }
 
 .button--info {
     position: relative;
     margin-right: 20px;
-    border: 2px solid red;
-    color: #fff;
+    border: 2px solid #e08342;
+    color: #e08342;
     box-shadow: 0px 5px 20px 0px rgba(155,70,70,.35);
 }
 
 .button--submit {
     margin-top: 35px;
-    background-color: red
+    background-color: #e08342;
 }
 
 .main {
+    background-color: #303030;
+    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
+    background-size: 150px;
     position: absolute;
     top: 0;
     left: 0;
@@ -203,7 +212,6 @@ ul {
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    background-color: #555555;
     transition: 1s;
 }
 
@@ -264,7 +272,7 @@ ul {
     height: 100vh;
     width: 100%;
     z-index: 1;
-    background-color: #fff;
+    background-color: #303030;
     background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
     background-size: 150px;
 }
@@ -294,7 +302,7 @@ ul {
     height: 5px;
     width: 70px;
     bottom: -20px;
-    background: red;
+    background-color: #e08342;
     left: 0;
 }
 
@@ -308,7 +316,7 @@ ul {
 .card__text {
     max-width: 50%;
     margin-bottom: 30px;
-    color: rgb(87, 91, 102);
+    color: #fff;
     font-size: 1.2em;
     line-height: 1.75em;
     margin-left: 100px;
@@ -317,13 +325,13 @@ ul {
 .card__text--advertisers {
     max-width: 100%;
     margin-left: 0;
-    color: rgb(87, 91, 102);
+    color: #fff;
 }
 
 .card__text--streamers {
     max-width: 100%;
     margin-left: 0;
-    color: rgb(87, 91, 102);
+    color: #fff;
 }
 
 .card__aside {
@@ -364,7 +372,7 @@ ul {
     width: 50%;
     height: 80px;
     line-height: 80px;
-    color: #000
+    color: #fff;
 }
 
 .background__title {
@@ -394,7 +402,9 @@ ul {
     padding: 200px 0;
     width: 100%;
     z-index: 2;
-    background-color: #fff
+    background-color: #303030;
+    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
+    background-size: 150px;
 }
 
 .contacts {
@@ -435,22 +445,26 @@ ul {
 }
 
 .contacts__block {
-    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 0 20px 1px rgba(8,8,8,.15);
     padding: 30px 70px;
+    background-color: #303030;
+    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
+    background-size: 150px;
 }
 
 .contacts__title {
     font-size: 2em;
     margin-bottom: 35px;
+    color: #fff
 }
 
 .contacts__title:after {
     left: 50%;
     transform: translateX(-50%);
+    background-color: #e08342;
 }
 
 .contacts__block--info {
@@ -467,7 +481,7 @@ ul {
     justify-content: flex-start;
     align-items: center;
     font-size: 1.5em;
-    color: #000
+    color: #fff
 }
 
 .contacts__input {
@@ -488,99 +502,13 @@ ul {
 }
 /*
 
-
-
 */
 .contacts__block--form {
-    background-color: #fff;
     box-shadow: 0px 0 20px 1px rgba(8,8,8,.15);
-}
-
-.colorPanel-red-color {
-    color: #000;
-}
-
-.colorPanel-red-backgroundColor {
-    background-color: #fff;
-        background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
-    background-size: 150px;
-}
-
-.colorPanel-red-backgroundColorSpecial, .colorPanel-red-backgroundColorAfter:after {
-    background-color: #b91313;
-}
-
-.colorPanel-red-border {
-    border: 2px solid #b91313;
-        color: #b91313;
-}
-
-.colorPanel-red-boxShadow {
-    box-shadow: 0px 5px 20px 0px rgba(155,0,0,.5);
-}
-
-.colorPanel-red-boxShadowInfo {
-    box-shadow: 0px 5px 20px 0px rgba(155,70,70,.35)
-}
-/*
-
-*/
-.colorPanel-blue-color {
-    color: #000;
-}
-
-.colorPanel-blue-backgroundColor {
-    background-color: #fff;
-        background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
-    background-size: 150px;
-}
-
-.colorPanel-blue-backgroundColorSpecial, .colorPanel-blue-backgroundColorAfter:after {
-    background-color: #1d1d7f;
-}
-
-.colorPanel-blue-border {
-    border: 2px solid #1d1d7f;
-        color: #1d1d7f;
-}
-
-.colorPanel-blue-boxShadow {
-    box-shadow: 0px 5px 20px 0px rgba(0,0,155,.5);
-}
-
-.colorPanel-blue-boxShadowInfo {
-    box-shadow: 0px 5px 20px 0px rgba(70,70,155,.35)
-}
-/*
-
-*/
-.colorPanel-orange-color {
-    color: #fff;
-}
-
-.colorPanel-orange-backgroundColor {
     background-color: #303030;
-        background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
+    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
     background-size: 150px;
 }
-
-.colorPanel-orange-backgroundColorSpecial, .colorPanel-orange-backgroundColorAfter:after {
-    background-color: #e08342;
-}
-
-.colorPanel-orange-border {
-    border: 2px solid #e08342;
-    color: #e08342;
-}
-
-.colorPanel-orange-boxShadow {
-    box-shadow: 0px 5px 20px 0px rgba(155,0,0,.5);
-}
-
-.colorPanel-orange-boxShadowInfo {
-    box-shadow: 0px 5px 20px 0px rgba(155,70,70,.35)
-}
-
 
 
 

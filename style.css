@@ -106,8 +106,6 @@ ul {
 
 .header {
     background-color: #303030;
-    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
-    background-size: 150px;
     color: #fff;
     z-index: 10;
     position: fixed;
@@ -135,7 +133,7 @@ ul {
 
 .header__menu {
     background-color: #303030;
-    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
+    background-image: linear-gradient(90deg, #666 0%, transparent 0%, #666 1%, transparent 1%, transparent);
     background-size: 150px;
     position: relative;
     height: 100%;
@@ -273,7 +271,7 @@ ul {
     width: 100%;
     z-index: 1;
     background-color: #303030;
-    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
+        background-image: linear-gradient(90deg, #666 0%, transparent 0%, #666 1%, transparent 1%, transparent);
     background-size: 150px;
 }
 
@@ -351,7 +349,7 @@ ul {
     top: 0;
     right: calc(100% + 15px);
     font-size: 4em;
-    color: red;
+    color: #e08342;
 }
 
 .card__list {
@@ -381,7 +379,7 @@ ul {
     top: 50%;
     left: 300px;
     font-size: 20em;
-    color: #f0f2f8;
+    color: #3c3c3c;
     opacity: .75;
     transform: translateY(-50%);
     text-align: center;
@@ -403,7 +401,7 @@ ul {
     width: 100%;
     z-index: 2;
     background-color: #303030;
-    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
+    background-image: linear-gradient(90deg, #666 0%, transparent 0%, #666 1%, transparent 1%, transparent);
     background-size: 150px;
 }
 
@@ -451,8 +449,6 @@ ul {
     box-shadow: 0px 0 20px 1px rgba(8,8,8,.15);
     padding: 30px 70px;
     background-color: #303030;
-    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
-    background-size: 150px;
 }
 
 .contacts__title {
@@ -500,22 +496,3 @@ ul {
 .contacts__input:focus {
     border-bottom: 2px solid red;
 }
-/*
-
-*/
-.contacts__block--form {
-    box-shadow: 0px 0 20px 1px rgba(8,8,8,.15);
-    background-color: #303030;
-    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
-    background-size: 150px;
-}
-
-
-
-
-
-
-
-
-
-

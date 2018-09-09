@@ -1,20 +1,5 @@
 let timeoutEnded = false
 
-document.addEventListener("DOMContentLoaded", function(event) {
-    listenScroll();
-});
-
-ymaps.ready(init);
-
-function init () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.749750, 37.542581],
-            zoom: 16
-        });
-}
-
-///////////////////////////////////////////////////////
-
 const openMenu = () => {
     const menu = document.querySelector('.nav');
     menu.className += ' show';
@@ -42,4 +27,32 @@ const listenScroll = () => {
             main.style.transform = 'translateY(-0%)'
         }
     })
+}
+
+const focusForm = () => {
+    document.querySelector('#name').scrollIntoView({ block: 'start',  behavior: 'smooth' })
+    setTimeout(() => {
+        document.querySelector('#name').focus();
+    }, 500);
+};
+
+const focusFormFromVideo = () => {
+        document.querySelector('#name').focus();
+    setTimeout(() => {
+        document.querySelector('#name').scrollIntoView({ block: 'start',  behavior: 'smooth' })
+    }, 1200);
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    listenScroll();
+});
+
+ymaps.ready(init);
+
+function init () {
+    var myMap = new ymaps.Map('map', {
+            center: [55.780290, 37.458947],
+            zoom: 16,
+            controls: []
+        });
 }

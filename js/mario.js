@@ -11,7 +11,7 @@ let marioTimer;
 let previousScrollPosition = 0;
 
 const marioSvg = document.querySelector('#mario__svg');
-const refresh = () => { TweenLite.to(".mario__base", 1, {morphSVG:".mario__idle"}) };
+const refresh = () => { TweenLite.to(".mario__base", .5, {morphSVG:".mario__idle"}) };
 
 const body = document.body;
 const html = document.documentElement;
@@ -21,9 +21,9 @@ const realHeight = height - viewportToPixels('100vh');
 export const enableMarioMorphing = () => {
     marioSvg.style.transform = previousScrollPosition - window.scrollY > 0 ? 'scale(-1,1)' : "scale(1,1)";
     previousScrollPosition = window.scrollY;
-    TweenLite.to(".mario__base", 1, {morphSVG:".mario__run"});
+    TweenLite.to(".mario__base", .5, {morphSVG:".mario__run"});
     clearTimeout(marioTimer);
-    setTimeout(refresh, 750);
+    setTimeout(refresh, 200);
 
 };
 
@@ -57,7 +57,7 @@ export let choreographer = new Choreographer({
             unit: '%'
         },
         {
-            range: [0, realHeight * 0.15 - 1],
+            range: [0, realHeight * 0.18 - 1],
             selector: '#mario__svg',
             type: 'scale',
             style: 'transform:translateY',
@@ -66,34 +66,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.15, realHeight * 0.2],
-            selector: '#mario__svg',
-            type: 'scale',
-            style: 'transform:translateY',
-            from: 0,
-            to: -20,
-            unit: 'px'
-        },
-        {
-            range: [realHeight * 0.2 + 1, realHeight * 0.25],
-            selector: '#mario__svg',
-            type: 'scale',
-            style: 'transform:translateY',
-            from: -20,
-            to: 0,
-            unit: 'px'
-        },
-        {
-            range: [realHeight * 0.25 + 1, realHeight * 0.4 - 1],
-            selector: '#mario__svg',
-            type: 'scale',
-            style: 'transform:translateY',
-            from: 0,
-            to: 0,
-            unit: 'px'
-        },
-        {
-            range: [realHeight * 0.4, realHeight * 0.45],
+            range: [realHeight * 0.18, realHeight * 0.2],
             selector: '#mario__svg',
             type: 'scale',
             style: 'transform:translateY',
@@ -102,7 +75,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.45 + 1, realHeight * 0.5],
+            range: [realHeight * 0.2 + 1, realHeight * 0.22],
             selector: '#mario__svg',
             type: 'scale',
             style: 'transform:translateY',
@@ -111,7 +84,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.5 + 1, realHeight * 0.65 - 1],
+            range: [realHeight * 0.22 + 1, realHeight * 0.43 - 1],
             selector: '#mario__svg',
             type: 'scale',
             style: 'transform:translateY',
@@ -120,7 +93,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.65, realHeight * 0.7],
+            range: [realHeight * 0.43, realHeight * 0.45],
             selector: '#mario__svg',
             type: 'scale',
             style: 'transform:translateY',
@@ -129,7 +102,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.7 + 1, realHeight * 0.75],
+            range: [realHeight * 0.45 + 1, realHeight * 0.47],
             selector: '#mario__svg',
             type: 'scale',
             style: 'transform:translateY',
@@ -138,7 +111,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.75 + 1, realHeight * 0.9 - 1],
+            range: [realHeight * 0.47 + 1, realHeight * 0.68 - 1],
             selector: '#mario__svg',
             type: 'scale',
             style: 'transform:translateY',
@@ -147,7 +120,34 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.9, realHeight * 0.95],
+            range: [realHeight * 0.68, realHeight * 0.7],
+            selector: '#mario__svg',
+            type: 'scale',
+            style: 'transform:translateY',
+            from: 0,
+            to: -20,
+            unit: 'px'
+        },
+        {
+            range: [realHeight * 0.7 + 1, realHeight * 0.72],
+            selector: '#mario__svg',
+            type: 'scale',
+            style: 'transform:translateY',
+            from: -20,
+            to: 0,
+            unit: 'px'
+        },
+        {
+            range: [realHeight * 0.72 + 1, realHeight * 0.93 - 1],
+            selector: '#mario__svg',
+            type: 'scale',
+            style: 'transform:translateY',
+            from: 0,
+            to: 0,
+            unit: 'px'
+        },
+        {
+            range: [realHeight * 0.93, realHeight * 0.95],
             selector: '#mario__svg',
             type: 'scale',
             style: 'transform:translateY',
@@ -165,7 +165,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [0, realHeight * 0.15 - 1],
+            range: [0, realHeight * 0.18 - 1],
             selector: '#header__about',
             type: 'scale',
             style: 'transform:translateY',
@@ -174,7 +174,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.15, realHeight * 0.2],
+            range: [realHeight * 0.18, realHeight * 0.2],
             selector: '#header__about',
             type: 'scale',
             style: 'transform:translateY',
@@ -183,7 +183,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.2 + 1, realHeight * 0.25],
+            range: [realHeight * 0.2 + 1, realHeight * 0.22],
             selector: '#header__about',
             type: 'scale',
             style: 'transform:translateY',
@@ -192,7 +192,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.25 + 1, realHeight],
+            range: [realHeight * 0.22 + 1, realHeight],
             selector: '#header__about',
             type: 'scale',
             style: 'transform:translateY',
@@ -201,7 +201,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [0, realHeight * 0.4 - 1],
+            range: [0, realHeight * 0.43 - 1],
             selector: '#header__advertisers',
             type: 'scale',
             style: 'transform:translateY',
@@ -210,7 +210,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.4, realHeight * 0.45],
+            range: [realHeight * 0.43, realHeight * 0.45],
             selector: '#header__advertisers',
             type: 'scale',
             style: 'transform:translateY',
@@ -219,7 +219,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.45 + 1, realHeight * 0.5],
+            range: [realHeight * 0.45 + 1, realHeight * 0.47],
             selector: '#header__advertisers',
             type: 'scale',
             style: 'transform:translateY',
@@ -228,7 +228,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.5 + 1, realHeight],
+            range: [realHeight * 0.47 + 1, realHeight],
             selector: '#header__advertisers',
             type: 'scale',
             style: 'transform:translateY',
@@ -237,7 +237,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [0, realHeight * 0.65 - 1],
+            range: [0, realHeight * 0.68 - 1],
             selector: '#header__streamers',
             type: 'scale',
             style: 'transform:translateY',
@@ -246,7 +246,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.65, realHeight * 0.7],
+            range: [realHeight * 0.68, realHeight * 0.7],
             selector: '#header__streamers',
             type: 'scale',
             style: 'transform:translateY',
@@ -255,7 +255,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.7 + 1, realHeight * 0.75],
+            range: [realHeight * 0.7 + 1, realHeight * 0.72],
             selector: '#header__streamers',
             type: 'scale',
             style: 'transform:translateY',
@@ -264,7 +264,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.75 + 1, realHeight],
+            range: [realHeight * 0.72 + 1, realHeight],
             selector: '#header__streamers',
             type: 'scale',
             style: 'transform:translateY',
@@ -274,7 +274,7 @@ export let choreographer = new Choreographer({
         },
 
         {
-            range: [0, realHeight * 0.9 - 1],
+            range: [0, realHeight * 0.93 - 1],
             selector: '#header__contacts',
             type: 'scale',
             style: 'transform:translateY',
@@ -283,7 +283,7 @@ export let choreographer = new Choreographer({
             unit: 'px'
         },
         {
-            range: [realHeight * 0.9, realHeight * 0.95],
+            range: [realHeight * 0.93, realHeight * 0.95],
             selector: '#header__contacts',
             type: 'scale',
             style: 'transform:translateY',

@@ -30,7 +30,7 @@ ul {
 
 .header {
     background-color: rgb(48, 48, 48);
-    color: #fff;
+    color: #f7f6f1;
     z-index: 1000;
     position: fixed;
     height: 100px;
@@ -83,18 +83,18 @@ ul {
 }
 
 .header__contacts a {
-    color: #fff;
+    color: #f7f6f1;
     text-decoration: none;
 }
 
 .header__email {
     font-size: 1.4em;
-    color: #fff;
+    color: #f7f6f1;
 }
 
 .header__phone {
     font-size: 1.1em;
-    color: #fff;
+    color: #f7f6f1;
 }
 
 .header__menu {
@@ -155,7 +155,7 @@ ul {
 
 .mario-red {fill: #e08342;}
 .mario-blue {fill: #0432ff;}
-.mario-yellow {fill: #fffb01;}
+.mario-yellow {fill: #f7f6f1b01;}
 .mario-black {fill: #2b1100;}
 .mario-skin {fill: #ffb481;}
 
@@ -169,7 +169,7 @@ ul {
 }
 
 .header__navItem a {
-    color: #fff;
+    color: #f7f6f1;
     text-decoration: none;
 }
 
@@ -182,7 +182,7 @@ ul {
 }
 
 .buttonContainer--text {
-    color: #fff;
+    color: #f7f6f1;
     font-size: 1.5em;
     line-height: 1.5em;
 }
@@ -194,7 +194,7 @@ ul {
 .button {
     height: 60px;
     width: 250px;
-    color: #fff;
+    color: #f7f6f1;
     font-weight: bold;
     font-size: 1.5em;
     box-shadow: 0px 5px 20px 0px rgba(155,0,0,.5);
@@ -205,14 +205,14 @@ ul {
 .button--cta {
     box-shadow: 0px 5px 20px 0px rgba(155,0,0,.5);
     background-color: #e08342;
-    color: #fff;
+    color: #f7f6f1;
 }
 
 .button--info {
     position: relative;
     margin-right: 20px;
     border: 2px solid #e08342;
-    color: #fff;
+    color: #f7f6f1;
     box-shadow: 0px 5px 20px 0px rgba(155,70,70,.35);
     display: flex;
     align-items: center;
@@ -303,14 +303,14 @@ ul {
     text-align: center;
     font-weight: bold;
     font-size: 6em;
-    color: #fff;
+    color: #f7f6f1;
 }
 
 .helloMessage__text {
     font-size: 2em;
     max-width: 70%;
     text-align: center;
-    color: #fff;
+    color: #f7f6f1;
     margin: 20px 0;
 }
 
@@ -318,7 +318,7 @@ ul {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -328,38 +328,26 @@ ul {
 }
 
 .title {
-    background: #fff;
-    height: 180px;
+    margin-top: 50px;
+    height: 100px;
     width: 100%;
-    padding: 20px 0;
     text-align: center;
     color: #303030;
-    border-top: 1px solid rgba(48,48,48,.3);
-    border-bottom: 1px solid rgba(48,48,48,.3);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 15%;
 }
 
 .title--black {
-    background: #303030;
-    height: 180px;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-    color: #fff;
-    border-top: 1px solid #3a3a3a;
-    border-bottom: 1px solid #3a3a3a;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    background: none;
+    color: #f7f6f1;
 }
 
 .title__main {
-    font-size: 5em;
-    font-weight: 400;
+    font-size: 4em;
+    font-weight: 700;
 }
 
 .title__sub {
@@ -372,14 +360,85 @@ ul {
     height: 100vh;
     width: 100%;
     z-index: 1;
-    background-color: #fff;
+    background: #f7f6f1 url(https://kteknano.com/wp-content/uploads/clean-white-polygon-backgrounds-7.jpg);
+}
+
+.infoBlock{
+    height: auto;
+    width: 100%;
+    margin-left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.infoBlock__container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.infoBlock__text {
+    color: #303030;
+    font-size: 1.7em;
+    line-height: 1.7em;
+    margin: 15px 0;
+}
+
+.infoBlock__text--black {
+    color: #f7f6f1;
+}
+
+.principes {
+    height: auto;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.principe {
+    position: relative;
+    border-radius: 15px;
+    border: 2px dashed rgba(48,48,48,.3);
+    padding: 20px;
+    height: 350px;
+    width: 250px;
+    display: flex;
+    background: rgba(255,255,255,.25);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.principe__title {
+    font-size: 1.9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.principe__icon {
+    height: 100px;
+    margin: 40px 0;
+    width: auto;
+}
+
+.principe__text {
+    font-size: 1.1em;
+    line-height: 1.1em;
+    font-style: italic;
+    text-align: center;
 }
 
 .card {
-    margin: 70px 0;
     position: relative;
     z-index: 1;
-    height: auto;
+    height: 50vh;
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -441,13 +500,13 @@ ul {
 .card__text--advertisers {
     max-width: 100%;
     margin-left: 0;
-    color: #fff;
+    color: #f7f6f1;
 }
 
 .card__text--streamers {
     max-width: 100%;
     margin-left: 0;
-    color: #fff;
+    color: #f7f6f1;
 }
 
 .card__aside {
@@ -457,7 +516,7 @@ ul {
     background-color: #303030;
     border: 3px solid rgb(224, 130, 66);
     box-shadow: 0px 0px 5px 1px black;
-    color: #fff;
+    color: #f7f6f1;
     font-weight: 400;
     padding: 20px;
 }
@@ -486,7 +545,7 @@ ul {
     width: 28%;
     height: 100px;
     line-height: 30px;
-    color: #fff;
+    color: #f7f6f1;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -554,7 +613,7 @@ ul {
 }
 
 .streamers{
-    background: #fff;
+    background: #f7f6f1;
 }
 
 .contacts {
@@ -606,7 +665,7 @@ ul {
 .contacts__title {
     font-size: 2em;
     margin-bottom: 35px;
-    color: #fff
+    color: #f7f6f1
 }
 
 .contacts__title:after {
@@ -629,7 +688,7 @@ ul {
     justify-content: flex-start;
     align-items: center;
     font-size: 1.5em;
-    color: #fff
+    color: #f7f6f1
 }
 
 .contacts__input {
@@ -642,7 +701,7 @@ ul {
     background: transparent;
     font-size: 1.25em;
     transition: .5s;
-    color: #fff;
+    color: #f7f6f1;
 }
 
 .contacts__input:focus {
@@ -651,11 +710,10 @@ ul {
 }
 
 .gamepad {
-    margin-bottom: 50px;
     position: relative;
     z-index: 1;
-    height: auto;
-    width: 100%;
+    height: calc(80vh - 120px);
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -696,7 +754,7 @@ ul {
 }
 
 .service--white {
-    background: #fff;
+    background: #f7f6f1;
     box-shadow: 0px 0px 10px 1px #e2e2e2;
     border: 3px solid #cdcdcd;
 }
@@ -709,7 +767,7 @@ ul {
 .service__text{
     text-align: center;
     margin-top: 30px;
-    color: #fff;
+    color: #f7f6f1;
     font-weight: 700;
 }
 
@@ -733,7 +791,7 @@ ul {
 }
 
 .service--white .service__brief {
-    background: #fff;
+    background: #f7f6f1;
 }
 
 .service__brief--active {
@@ -754,7 +812,7 @@ ul {
 }
 
 .service:hover #more-arrows polygon {
-    fill: #FFF;
+    fill: #f7f6f1;
     transition: all .2s ease-out;
 }
 
@@ -771,7 +829,7 @@ ul {
 }
 
 polygon {
-    fill: #FFF;
+    fill: #f7f6f1;
     transition: all .2s ease-out;
 }
 
@@ -791,7 +849,7 @@ polygon.arrow-top {
     cursor: pointer;
     padding: 15px;
     width: auto;
-    background: #fff;
+    background: #f7f6f1;
     color: #303030;
     height: 100%;
     display: flex;
@@ -802,5 +860,5 @@ polygon.arrow-top {
 
 .service--white .service__info {
     background: #303030;
-    color: #fff;
+    color: #f7f6f1;
 }

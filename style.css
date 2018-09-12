@@ -28,103 +28,13 @@ ul {
     list-style-type: none;
 }
 
-.colorPanel {
-    z-index: 1600;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-
-.colorPanel button {
-    width:100px;
-    height:75px;
-}
-
-.nav {
-    z-index: 1500;
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #e08342;
-    transition: 0.75s ease-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
-    background-size: 150px;
-}
-
-.nav.show {
-    transform: translateY(100%);
-}
-
-.nav__close {
-    position: absolute;
-    top: 10px;
-    height: 40px;
-    width: 40px;
-    right: 30px;
-    cursor: pointer;
-}
-
-.nav__close span {
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    transform: translate(-50%, -50%) rotateZ(45deg);
-    left: 50%;
-    top: 50%;
-    background: #fff;
-    cursor: pointer;
-}
-
-.nav__close span:nth-child(1) {
-    transform: translate(-50%, -50%) rotateZ(135deg);
-}
-
-.nav__close:hover {
-    cursor: pointer;
-}
-
-.nav__list {
-    margin-left: 300px;
-    margin-top: 10%;
-}
-
-.nav__item {
-    padding-left: 50px;
-    color: #fff;
-    font-size: 3.75em;
-    font-weight: bold;
-    height: 100px;
-    line-height: 100px;
-    transition: .3s;
-    border-left: 0px solid #fff;
-}
-
-.nav__item:hover {
-    font-size: 3.85em;
-    border-left: 6px solid #fff;
-}
-
-.nav__item--anchor,
-.nav__item--anchor:active,
-.nav__item--anchor:hover {
-    text-decoration: none;
-    color: #fff !important;
-}
-
 .header {
-    background-color: rgba(48, 48, 48, .92);
+    background-color: rgb(48, 48, 48);
     color: #fff;
     z-index: 1000;
     position: fixed;
     height: 100px;
-    width: calc(100% - 50px);
-    padding: 0 25px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -134,8 +44,36 @@ ul {
     top: 0;
 }
 
+.header__left{
+    z-index: 5;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100px;
+    width: 20vw;
+    background-color: #303030;
+}
+
+.header__left::after{
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 10%;
+    width: 5px;
+    height: 80%;
+    background-color: #e08342;
+    box-shadow: 0 0 5px 5px rgba(48, 48, 48, .5);
+}
+
+.header__logo {
+    margin-left: 30px;
+    width: auto;
+}
+
 .header__contacts{
-    min-width: 250px;
+    width: calc(15vw - 30px);
     height: 75%;
     margin-left: 30px;
     display: flex;
@@ -150,12 +88,12 @@ ul {
 }
 
 .header__email {
-    font-size: 1.7em;
+    font-size: 1.4em;
     color: #fff;
 }
 
 .header__phone {
-    font-size: 1.4em;
+    font-size: 1.1em;
     color: #fff;
 }
 
@@ -189,15 +127,42 @@ ul {
 }
 
 .header__nav {
-    width: 100%;
+    position: relative;
+    width: 80vw;
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
+.mario{
+    transform: translateX(-9vw);
+    height: 24px;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+    transition: transform 1s;
+}
+
+#mario__svg {
+    transform: translateY(0);
+}
+
+.mario-red {fill: #e08342;}
+.mario-blue {fill: #0432ff;}
+.mario-yellow {fill: #fffb01;}
+.mario-black {fill: #2b1100;}
+.mario-skin {fill: #ffb481;}
+
+
 .header__navItem {
-    margin: 0 40px;
+    width: 20%;
+    text-align: center;
     font-weight: 700;
     font-size: 1.5em;
     cursor: pointer;
@@ -404,7 +369,7 @@ ul {
 }
 
 .about {
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     z-index: 1;
     background-color: #fff;
@@ -580,7 +545,7 @@ ul {
 
 .advertisers, .streamers {
     position: relative;
-    height: auto;
+    height: 100vh;
     width: 100%;
     z-index: 2;
     background-color: #303030;
@@ -593,7 +558,7 @@ ul {
 }
 
 .contacts {
-    height: calc(100vh - 80px);
+    height: 100vh;
     width: 100%;
     background-image: url('https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8c5ad9c21b5d45bae33df34d4881b03d47b68cf2dff821faae172330ff4fac8e&amp;lang=ru_RU');
 }
@@ -808,7 +773,7 @@ ul {
 polygon {
     fill: #FFF;
     transition: all .2s ease-out;
-}   
+}
 
 .service--white polygon {
     fill: #303030;

@@ -602,7 +602,7 @@ ul {
     font-size: 9em;
 }
 
-.advertisers, .streamers {
+.advertisers {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -613,7 +613,49 @@ ul {
 }
 
 .streamers{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
     background: #f7f6f1;
+}
+
+.streamers__services {
+    margin: auto;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.streamers__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 115px;
+}
+
+.streamers__column:nth-child(2){
+    border: 1px dashed rgba(48,48,48,.3);
+    border-top: none;
+    border-bottom: none;
+}
+
+.streamers__level {
+    width: 120px;
+    height: auto;
+}
+
+.streamers__service {
+    height: 120px;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contacts {
@@ -802,6 +844,12 @@ ul {
     cursor: pointer;
 }
 
+@keyframes arrows {
+    0% {filter: invert(0%);}
+    50% {filter: invert(50%);}
+    100% {filter: invert(0%);}
+}
+
 #more-arrows {
     bottom: -10px;
     position: absolute;
@@ -809,6 +857,9 @@ ul {
     height: 65px;
     left: 50%;
     transform: translateX(-50%) scale(.35);
+    animation-name: arrows;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
 }
 
 .service:hover #more-arrows polygon {

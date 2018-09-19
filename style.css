@@ -602,7 +602,7 @@ ul {
     font-size: 9em;
 }
 
-.advertisers, .streamers {
+.advertisers {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -613,7 +613,60 @@ ul {
 }
 
 .streamers{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
     background: #f7f6f1;
+}
+
+.streamers__services {
+    margin: auto;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.streamers__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 25px;
+    width: 20%;
+}
+
+.streamers__column:nth-child(2){
+    border: 1px dashed rgba(48,48,48,.3);
+    border-top: none;
+    border-bottom: none;
+}
+
+.streamers__level {
+    width: 120px;
+    height: auto;
+}
+
+.streamers__service {
+    height: 120px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color .5s;
+}
+
+.streamers__service:hover{
+    text-decoration: none;
+    color: #e08341;
 }
 
 .contacts {
@@ -802,6 +855,12 @@ ul {
     cursor: pointer;
 }
 
+@keyframes arrows {
+    0% {filter: invert(0%);}
+    50% {filter: invert(50%);}
+    100% {filter: invert(0%);}
+}
+
 #more-arrows {
     bottom: -10px;
     position: absolute;
@@ -809,6 +868,9 @@ ul {
     height: 65px;
     left: 50%;
     transform: translateX(-50%) scale(.35);
+    animation-name: arrows;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
 }
 
 .service:hover #more-arrows polygon {
@@ -862,3 +924,22 @@ polygon.arrow-top {
     background: #303030;
     color: #f7f6f1;
 }
+
+.tooltip {
+    background: #f7f6f1;
+    border: 1px solid #e08342;
+    transition: 1.5s;
+    border-radius: 10px;
+    padding: 15px;
+    opacity: 0;
+}
+
+.tooltip[aria-hidden="false"] {
+    opacity: 1;
+    transition: 1.5s;
+}
+
+.tooltip li {
+    margin: 5px 0;
+}
+

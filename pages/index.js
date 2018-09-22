@@ -1,10 +1,10 @@
 import './style.css';
-import {choreographer, enableMarioMorphing} from './js/mario';
-import {interval} from './js/parallax';
-import './js/serviceCards';
-import './js/map';
-import './js/reveals';
-import './js/tooltips';
+import {choreographer, enableMarioMorphing} from '../js/mario';
+import {interval} from '../js/parallax';
+import '../js/serviceCards';
+import '../js/map';
+import '../js/reveals';
+// import './js/tooltips';
 
 // LISTENERS
 window.addEventListener('scroll', function () {

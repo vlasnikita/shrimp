@@ -626,14 +626,78 @@ ul {
     background: #f7f6f1;
 }
 
-.streamers__services {
-    margin: auto;
-    width: 100%;
-    height: 50vh;
+.streamers__tabContainer{
+    width: 80%;
+}
+
+.streamers__nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.streamers__nav li {
+    display: flex;
+    width: 34%;
+    height: 100px;
+}
+
+.streamers__navLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: 3px solid #3b3b3b;
+    border-bottom: none;
+    background: #3b3b3b;
+}
+
+.streamers__navLink--visible {
+    border: 3px solid #e08342;
+    border-bottom: none;
+    position: relative;
+    background: #303030;
+}
+
+.streamers__navLink--visible:after {
+    z-index: 2;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: #303030;
+}
+
+#streamers__navLink--left{
+    border-top-left-radius: 15px;
+}
+
+#streamers__navLink--right{
+    border-top-right-radius: 15px;
+}
+
+.streamers__services {
+    position: relative;
+    margin: auto;
+    width: calc(100% - 6px);
+    height: 50vh;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.streamers__services--visible {
+    display: flex;
+    background: #303030;
+    border: 3px solid #e08342;
 }
 
 .streamers__column {
@@ -641,22 +705,16 @@ ul {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 0 25px;
-    width: 20%;
-}
-
-.streamers__column:nth-child(2){
-    border: 1px dashed rgba(48,48,48,.3);
-    border-top: none;
-    border-bottom: none;
+    width: 33%;
 }
 
 .streamers__level {
-    width: 120px;
+    width: 60px;
     height: auto;
 }
 
 .streamers__service {
+    color: #f7f6f2;
     height: 120px;
     font-size: 1.2em;
     font-weight: bold;
@@ -665,15 +723,8 @@ ul {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /*cursor: pointer;*/
-    /*text-decoration: underline;*/
     transition: color .5s;
 }
-
-/*.streamers__service:hover{*/
-    /*text-decoration: none;*/
-    /*color: #e08341;*/
-/*}*/
 
 .contacts {
     height: 100vh;

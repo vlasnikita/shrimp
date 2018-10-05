@@ -628,6 +628,7 @@ ul {
 
 .streamers__tabContainer{
     width: 80%;
+    margin: auto;
 }
 
 .streamers__nav {
@@ -704,8 +705,16 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     width: 33%;
+    height: 100%;
+    padding: 0 25px;
+}
+
+.streamers__column--last {
+    width: 50%;
+    font-weight: bold;
+    font-size: 1.2em;
+    justify-content: center;
 }
 
 .streamers__level {
@@ -715,9 +724,8 @@ ul {
 
 .streamers__service {
     color: #f7f6f2;
-    height: 120px;
-    font-size: 1.2em;
-    font-weight: bold;
+    height: 90px;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;

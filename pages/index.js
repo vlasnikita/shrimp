@@ -4,6 +4,7 @@ import {interval} from '../js/parallax';
 import '../js/serviceCards';
 import '../js/map';
 import '../js/reveals';
+import '../js/streamersTabs';
 // import './js/tooltips';
 
 // LISTENERS

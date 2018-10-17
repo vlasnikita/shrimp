@@ -5,7 +5,8 @@ document.querySelectorAll('.principe').forEach((principe, i) => {
         delay: i * 250,
         duration: 750,
         distance: '50px',
-        origin: 'left'
+        origin: 'left',
+        reset: false
     });
 });
 
@@ -15,7 +16,8 @@ document.querySelectorAll('.title__main').forEach((title) => {
             delay: (i + 1) * 20,
             duration: 750,
             distance: '10px',
-            origin: 'left'
+            origin: 'left',
+            reset: false
         });
     })
 });

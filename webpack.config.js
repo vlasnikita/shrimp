@@ -29,6 +29,9 @@ module.exports = {
             }, {
                 test: /\.png$/i,
                 use: ['url-loader?mimetype=image/png']
+            },{
+                test: /\.jpg$/i,
+                use: ['url-loader?mimetype=image/jpg']
             }, {
                 test: /\.gif$/i,
                 use: ['url-loader?mimetype=image/gif']

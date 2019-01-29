@@ -1,7 +1,5 @@
 body {
     margin: 0;
-    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
-    background-size: 150px;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 14px;
 }
@@ -29,106 +27,26 @@ ul {
 }
 
 .header {
-    background-color: rgb(48, 48, 48);
-    color: #f7f6f1;
+    color: #fff;
     z-index: 1000;
-    position: fixed;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: 0 0 20px 1px #3c3c3c;
-    transition: 1s;
-    top: 0;
-}
-
-.header__left{
-    z-index: 5;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100px;
-    width: 20vw;
-    background-color: #303030;
-}
-
-.header__left::after{
-    content: '';
     position: absolute;
-    left: 100%;
-    top: 10%;
-    width: 5px;
-    height: 80%;
-    background-color: #e08342;
-    box-shadow: 0 0 5px 5px rgba(48, 48, 48, .5);
+    height: 100px;
+    width: calc(100% - 270px);
+    padding: 0 135px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    border-bottom: 1px solid #888;
 }
 
 .header__logo {
-    margin-left: 30px;
     width: auto;
-}
-
-.header__contacts{
-    width: calc(15vw - 30px);
-    height: 75%;
-    margin-left: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-}
-
-.header__contacts a {
-    color: #f7f6f1;
-    text-decoration: none;
-}
-
-.header__email {
-    font-size: 1.4em;
-    color: #f7f6f1;
-}
-
-.header__phone {
-    font-size: 1.1em;
-    color: #f7f6f1;
-}
-
-.header__menu {
-    background-color: #303030;
-    position: relative;
-    height: 100%;
-    width: 40px;
-}
-
-.header__menu span {
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    background: currentColor;
-    -webkit-transition: all 0.2s 0.2s;
-    transition: 1s;
-}
-
-.header__menu span:nth-child(1) {
-    margin-top: -5px;
-}
-
-
-.header__menu span:nth-child(2) {
-    margin-top: 5px;
 }
 
 .header__nav {
     position: relative;
-    width: 80vw;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -136,42 +54,62 @@ ul {
     justify-content: center;
 }
 
-.mario{
-    transform: translateX(-9vw);
-    height: 24px;
-    position: absolute;
-    bottom: 20%;
-    left: 0;
-    -webkit-transition: transform 1s;
-    -moz-transition: transform 1s;
-    -ms-transition: transform 1s;
-    -o-transition: transform 1s;
-    transition: transform 1s;
+.header__navItem:nth-child(1) {
+    width: 125px;
 }
-
-#mario__svg {
-    transform: translateY(0);
-}
-
-.mario-red {fill: #e08342;}
-.mario-blue {fill: #0432ff;}
-.mario-yellow {fill: #f7f6f1b01;}
-.mario-black {fill: #2b1100;}
-.mario-skin {fill: #ffb481;}
-
 
 .header__navItem {
-    width: 20%;
+    position: relative;
+    line-height: 100px;
+    width: 105px;
     text-align: center;
-    font-weight: 700;
-    font-size: 1.5em;
+    font-family: Exo2, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
     cursor: pointer;
+}
+
+.header__navItem_active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 105px;
+    height: 3px;
+    background: #fa7717;
+    transform: translateX(-50%);
 }
 
 .header__navItem a {
     color: #f7f6f1;
     text-decoration: none;
 }
+/*  */
+
+.background {
+    overflow: auto;
+    position: relative;
+}
+
+.background:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  
+    display: block;
+    background-image: url("static/bg-main.jpg");
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+  
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+  }
 
 .buttonContainer {
     margin-bottom: 70px;
@@ -226,9 +164,6 @@ ul {
 }
 
 .main {
-    background-color: #303030;
-    background-image: linear-gradient(90deg, #ddd 0%, transparent 0%, #ddd 1%, transparent 1%, transparent);
-    background-size: 150px;
     position: relative;
     height: 100vh;
     width: 100%;

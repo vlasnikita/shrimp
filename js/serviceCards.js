@@ -1,10 +1,12 @@
-const briefs = document.querySelectorAll('.service__brief');
+const cards = document.querySelectorAll('.card');
+const buttons = document.querySelectorAll('.card__show');
+
 window.addEventListener('click', function(e){
-    briefs.forEach(brief => {
-        if(brief === e.target || brief.contains(e.target)){
-            brief.className = 'service__brief service__brief--active';
+    cards.forEach(card => {
+        if(e.target.className === 'card__show' && card.contains(e.target)){
+            card.className = 'card card_active';
         } else {
-            brief.className = 'service__brief';
+            card.className = 'card';
         }
     })
 }, false);

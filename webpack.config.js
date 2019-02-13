@@ -10,12 +10,13 @@ module.exports = {
     devtool: process.env.NODE_ENV === 'production' ? '' : "source-map",
     mode: process.env.NODE_ENV || 'development',
     entry: {
-        main: './script.js'
+        main: './script.js',
+        faq: './scriptFaq.js'
     },
     output: {
         path: distPath,
         publicPath: '/dist',
-        filename: "bundle.[contenthash:4].js",
+        filename: "[name].[contenthash:4].js",
     },
     module: {
         rules: [
@@ -62,13 +63,18 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "bundle.[contenthash:4].css",
+            filename: "[name].[contenthash:4].css",
         }),
         new CleanObsoleteChunks({deep: true}),
         new HtmlWebpackPlugin({
             title: 'Shrimp',
             filename: 'index.html',
             template: './template.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'FAQ | Shrimp',
+            filename: 'faq.html',
+            template: './faq.html'
         })
     ].filter(Boolean),
     devServer: {

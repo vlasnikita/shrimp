@@ -1,17 +1,19 @@
-function expandAnswer(e){
-    console.log(e.target.parentNode.parentNode)
-    const answers = document.querySelectorAll('.answer')
+const answers = document.querySelectorAll('.answer')
+
+function toggleAnswer(e){
     for(let i=0; i<answers.length; i++){
-        if(answers[i].contains(e.target)){
-            answers[i].className = 'answer active'
+        if(answers[i] === e.target || answers[i].contains(e.target)){
+            if(answers[i].className.includes('active')){
+                answers[i].className = 'answer'
+            } else {
+                answers[i].className = 'answer active'
+            }
         } else {
             answers[i].className = 'answer'
         }
     }
 }
 
-const answerWrappers = document.querySelectorAll('.answer__arrowWrapper')
-
-for(let j=0; j<answerWrappers.length; j++){
-    answerWrappers[j].addEventListener('click', expandAnswer)
+for(let j=0; j<answers.length; j++){
+    answers[j].addEventListener('click', toggleAnswer)
 }

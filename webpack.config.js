@@ -11,7 +11,9 @@ module.exports = {
     mode: process.env.NODE_ENV || 'development',
     entry: {
         main: './script.js',
-        faq: './scriptFaq.js'
+        faq: './scriptFaq.js',
+        cases: './scriptCases.js',
+        blog: './scriptBlog.js'
     },
     output: {
         path: distPath,
@@ -75,6 +77,16 @@ module.exports = {
             title: 'FAQ | Shrimp',
             filename: 'faq.html',
             template: './faq.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Кейсы | Shrimp',
+            filename: 'cases.html',
+            template: './cases.html'
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Блог | Shrimp',
+            filename: 'blog.html',
+            template: './blog.html'
         })
     ].filter(Boolean),
     devServer: {
